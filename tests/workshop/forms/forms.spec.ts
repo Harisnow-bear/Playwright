@@ -48,7 +48,7 @@ test.only('get title of the page', async ({page})=> {
     await page.goto('https://demo.playwright.dev/todomvc');
     const title = await page.title();
     console.log('Title of the page is : ' +  title);
-    await page.waitForTimeout(3000);
+
 });
 
 

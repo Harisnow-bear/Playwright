@@ -23,6 +23,7 @@ if(await checkbox.isChecked()) {
     console.log('Checkbox is already checked');
 }else{
     await checkbox.check();
+    console.log('Checkbox is now checked');
 }
 });
 

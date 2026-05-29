@@ -1,4 +1,5 @@
-import {test} from '@playwright/test';
+
+import {test,expect} from '@playwright/test';
 
 test('Page home', async ({page}) => {
 await page.goto('/');
@@ -6,7 +7,7 @@ await page.waitForTimeout(5000);
 await page.reload();
 });
 
-test.only('Free Trial',async ({page})=> {
+test('Free Trial',async ({page})=> {
 await page.goto('/');
 // await page.click('[data-backend-test-id="close-button"]');
 await page.locator('[data-ga-name="free trial"]').first().click();

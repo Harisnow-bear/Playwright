@@ -12,9 +12,10 @@ test('auth popup test',async ({page})=>{
     await page.goto  ('https://the-internet.herokuapp.com/basic_auth');
     await page.waitForTimeout(5000);
 
-    await page.close();
+    await new Promise (()=> {});
 });
 
 function createBasicAuthHeader(username: string, password: string) {
     return 'Basic ' + btoa(username + ':' + password);
 }
+

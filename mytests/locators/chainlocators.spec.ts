@@ -28,9 +28,9 @@ test.only("Chain Locators with nth", async ({page}) => {
     const textLocators:Locator[] = await page.locator("#Form_getForm").locator('[class=text]').all();
 
     for(const textbox  of textLocators){
-        for(const text of textinputs){
-            await textbox.fill(text);
-    }
+        
+            await textbox.fill("textinputs[textLocators.indexOf(textbox)]");
+    
     }
 
 })
